@@ -15,6 +15,7 @@
 }
 @property UILabel * titleLabel;
 @property UILabel * infoLabel;
+
 @end
 
 @implementation XUnitLabel
@@ -64,6 +65,7 @@
 {
     _infoLabel.textColor = textColor;
 }
+
 
 
 
@@ -130,6 +132,14 @@
         }
     }
     return self;
+}
+
+- (void)setBFold:(BOOL)bFold
+{
+    _bFold = bFold;
+    if (_bFold) {
+        
+    }
 }
 
 - (void)layoutSubviews

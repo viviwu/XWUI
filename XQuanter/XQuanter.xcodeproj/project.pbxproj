@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D15565F22D6C07400602606 /* MQHandicapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D15565E22D6C07400602606 /* MQHandicapView.m */; };
+		0D15566C22D740E200602606 /* MQDetialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D15566B22D740E200602606 /* MQDetialTableViewController.m */; };
+		0D15566F22D7463400602606 /* XTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D15566E22D7463400602606 /* XTableView.m */; };
 		0D22662E22D633B1003467F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D22662D22D633B1003467F3 /* AppDelegate.m */; };
 		0D22663122D633B1003467F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D22663022D633B1003467F3 /* ViewController.m */; };
 		0D22663422D633B1003467F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D22663222D633B1003467F3 /* Main.storyboard */; };
@@ -40,6 +42,10 @@
 /* Begin PBXFileReference section */
 		0D15565D22D6C07400602606 /* MQHandicapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQHandicapView.h; sourceTree = "<group>"; };
 		0D15565E22D6C07400602606 /* MQHandicapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQHandicapView.m; sourceTree = "<group>"; };
+		0D15566A22D740E200602606 /* MQDetialTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQDetialTableViewController.h; sourceTree = "<group>"; };
+		0D15566B22D740E200602606 /* MQDetialTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQDetialTableViewController.m; sourceTree = "<group>"; };
+		0D15566D22D7463400602606 /* XTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTableView.h; sourceTree = "<group>"; };
+		0D15566E22D7463400602606 /* XTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTableView.m; sourceTree = "<group>"; };
 		0D22662922D633B1003467F3 /* XQuanter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XQuanter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D22662C22D633B1003467F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0D22662D22D633B1003467F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +111,19 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
+		0D15566822D707CE00602606 /* RMQVews */ = {
+			isa = PBXGroup;
+			children = (
+				0D22666122D6350E003467F3 /* XView.h */,
+				0D22666222D6350E003467F3 /* XView.m */,
+				0D15566D22D7463400602606 /* XTableView.h */,
+				0D15566E22D7463400602606 /* XTableView.m */,
+				0D15566122D6C08F00602606 /* Dashboard */,
+				0D15566022D6C08200602606 /* Handicap */,
+			);
+			path = RMQVews;
+			sourceTree = "<group>";
+		};
 		0D22662022D633B1003467F3 = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +151,9 @@
 				0D22662D22D633B1003467F3 /* AppDelegate.m */,
 				0D22662F22D633B1003467F3 /* ViewController.h */,
 				0D22663022D633B1003467F3 /* ViewController.m */,
-				0D22666122D6350E003467F3 /* XView.h */,
-				0D22666222D6350E003467F3 /* XView.m */,
-				0D15566122D6C08F00602606 /* Dashboard */,
-				0D15566022D6C08200602606 /* Handicap */,
+				0D15566A22D740E200602606 /* MQDetialTableViewController.h */,
+				0D15566B22D740E200602606 /* MQDetialTableViewController.m */,
+				0D15566822D707CE00602606 /* RMQVews */,
 				0D22663222D633B1003467F3 /* Main.storyboard */,
 				0D22663522D633B2003467F3 /* Assets.xcassets */,
 				0D22663722D633B2003467F3 /* LaunchScreen.storyboard */,
@@ -295,9 +313,11 @@
 			files = (
 				0D22663122D633B1003467F3 /* ViewController.m in Sources */,
 				0D22666322D6350E003467F3 /* XView.m in Sources */,
+				0D15566F22D7463400602606 /* XTableView.m in Sources */,
 				0D15565F22D6C07400602606 /* MQHandicapView.m in Sources */,
 				0D22666622D63976003467F3 /* MQDashboard.m in Sources */,
 				0D22663C22D633B2003467F3 /* main.m in Sources */,
+				0D15566C22D740E200602606 /* MQDetialTableViewController.m in Sources */,
 				0D22662E22D633B1003467F3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
