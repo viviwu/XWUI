@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  XWReadAlert
+//  XWAlertView
 //
 //  Created by vivi wu on 2019/5/30.
 //  Copyright © 2019 vivi wu. All rights reserved.
@@ -48,7 +48,17 @@
     
     NSString * title2 = @"新股申购需要注意的 ";
     
-    [XWReadAlert ShowAlertWith:title2 message:msg2 delay:5];
+    XWReadAlert * alert = [XWReadAlert ShowAlertWith:title2 message:msg2 delay:5];
+    
+    alert.okBtnHander = ^(){
+        NSLog(@"%s", __func__);
+    };
+    alert.noBtnHander = ^(){
+        NSLog(@"%s", __func__);
+    };
+    alert.timerBtnHander = ^(){
+        NSLog(@"%s", __func__);
+    };
 }
 
 @end

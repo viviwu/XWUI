@@ -19,6 +19,13 @@
 {
     NSTimer * timer;
 }
+@property (nonatomic, assign) NSUInteger delay;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIButton *timerBtn;
+@property (weak, nonatomic) IBOutlet UIButton *okBtn;
+@property (weak, nonatomic) IBOutlet UIButton *noBtn;
+
 @end
 
 @implementation XWReadAlert
@@ -101,19 +108,23 @@
 }
 
 
-+ (void)ShowAlertWith:(NSString *)title
-                      message:(NSString *)msg
-                        delay:(NSUInteger)delay
++ (instancetype )ShowAlertWith:(NSString *)title
+                        message:(NSString *)msg
+                          delay:(NSUInteger)delay
 {
     XWReadAlert * alertView = [[XWReadAlert alloc]initWith:title message:msg delay:delay];
     
     [[UIApplication sharedApplication].keyWindow addSubview:alertView];
     alertView.center = [UIApplication sharedApplication].keyWindow.center;
-    return ;
+    
+    return alertView;
 }
 
 
 - (IBAction)doneAction:(id)sender {
+    if (self.okBtnHander) {
+        self.okBtnHander();
+    }
     self.okBtn.hidden = YES;
     self.noBtn.hidden = YES;
     self.timerBtn.hidden = NO;
@@ -131,7 +142,7 @@
         [timer invalidate];
         timer =nil;
         self.timerBtn.enabled = YES;
-        [self.timerBtn setTitle:@"关闭" forState:UIControlStateNormal];
+        [self.timerBtn setTitle:@"关闭" forState: UIControlStateNormal];
     }else{
         NSString * tips = [NSString stringWithFormat:@"请认真阅读协议(%lus)", (unsigned long)_delay];
         [self.timerBtn setTitle:tips forState:UIControlStateDisabled];
@@ -140,11 +151,16 @@
 }
 
 - (IBAction)timerBtnAction:(id)sender {
-    
+    if (self.timerBtnHander) {
+        self.timerBtnHander();
+    }
     [self removeFromSuperview];
 }
 
 - (IBAction)disapper:(id)sender {
+    if (self.noBtnHander) {
+        self.noBtnHander();
+    }
     [self removeFromSuperview];
 }
 

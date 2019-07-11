@@ -67,9 +67,7 @@
 				0DD0657F229FEE580053D2AE /* AppDelegate.m */,
 				0DD06581229FEE580053D2AE /* ViewController.h */,
 				0DD06582229FEE580053D2AE /* ViewController.m */,
-				0DD06594229FEE700053D2AE /* XWReadAlert.h */,
-				0DD06595229FEE700053D2AE /* XWReadAlert.m */,
-				0DD06597229FF0C00053D2AE /* XWReadAlert.xib */,
+				0DD0659922A0C4150053D2AE /* XWReadAlert */,
 				0DD06584229FEE580053D2AE /* Main.storyboard */,
 				0DD06587229FEE580053D2AE /* Assets.xcassets */,
 				0DD06589229FEE580053D2AE /* LaunchScreen.storyboard */,
@@ -77,6 +75,16 @@
 				0DD0658D229FEE580053D2AE /* main.m */,
 			);
 			path = XWAlertView;
+			sourceTree = "<group>";
+		};
+		0DD0659922A0C4150053D2AE /* XWReadAlert */ = {
+			isa = PBXGroup;
+			children = (
+				0DD06594229FEE700053D2AE /* XWReadAlert.h */,
+				0DD06595229FEE700053D2AE /* XWReadAlert.m */,
+				0DD06597229FF0C00053D2AE /* XWReadAlert.xib */,
+			);
+			path = XWReadAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
