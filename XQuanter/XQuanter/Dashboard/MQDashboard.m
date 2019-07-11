@@ -7,8 +7,78 @@
 //
 
 #import "MQDashboard.h"
-#import "XUnitLabel.h"
+  
+#pragma mark --XUnitLabel
+@interface XUnitLabel ()
+{
+    CGFloat gap;
+}
+@property UILabel * titleLabel;
+@property UILabel * infoLabel;
+@end
 
+@implementation XUnitLabel
+
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _titleLabel = [XView newLabel];
+        [self addSubview:_titleLabel];
+        
+        
+        _infoLabel = [XView newLabel];
+        [self addSubview:_infoLabel];
+        _infoLabel.textAlignment = NSTextAlignmentRight;
+        
+        
+        gap = 0;
+        self.backgroundColor = UIColor.whiteColor;
+        self.layer.borderColor = UIColor.groupTableViewBackgroundColor.CGColor;
+        self.layer.borderWidth = 0.5;
+    }
+    return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat W = kSelfW/3-gap;
+    _titleLabel.frame = CGRectMake(gap, 0, W, kSelfH);
+    _infoLabel.frame = CGRectMake(W+gap, 0, 2*W, kSelfH);
+}
+
+- (void)setTitle:(NSString *)title
+{
+    _titleLabel.text = title;
+}
+
+- (void)setInfo:(NSString *)info
+{
+    _infoLabel.text = info;
+    
+}
+
+- (void)setTextColor:(UIColor *)textColor
+{
+    _infoLabel.textColor = textColor;
+}
+
+
+
+/*
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
+
+@end
+
+
+#pragma mark --MQDashboard
 @interface MQDashboard ()
 {
     CGFloat gap;
@@ -21,7 +91,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        gap = 10;
+        gap = 5;
         int SEC = 10;
         float W = (kSelfW-gap)/3;
         float H = kSelfH/SEC;
