@@ -9,6 +9,7 @@
 #import "MQDetialTableViewController.h"
 #import "MQDashboard.h"
 #import "MQHandicapView.h"
+#import "XTableView.h"
 
 @interface MQDetialTableViewController ()
 {
@@ -23,17 +24,13 @@
 
 @implementation MQDetialTableViewController
 
-#define kScreenW    UIScreen.mainScreen.bounds.size.width
-#define kScreenH    UIScreen.mainScreen.bounds.size.height
 
-#define kSViewW         self.view.bounds.size.width
-#define kSViewH         self.view.bounds.size.height
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _gap = 10;
     _boardH = 200;
-    _chartH = 200;
+    _chartH = 240;
     _capH = 110;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,9 +50,11 @@
     _dashBoard = [[MQDashboard alloc]initWithFrame:CGRectMake(0, 0, kScreenW, _boardH)];
     [view addSubview: _dashBoard];
     
-    UIView * chatView = [[UIView alloc]initWithFrame:CGRectMake(0, _boardH+_gap, kScreenW, _chartH)];
-    chatView.backgroundColor = UIColor.whiteColor;
-    [view addSubview: chatView];
+    XTableView * tableView = [[XTableView alloc]initWithFrame:CGRectMake(2*kScreenW/3, 0, kScreenW/3, _chartH)];
+    UIView * chartView = [[UIView alloc]initWithFrame:CGRectMake(0, _boardH+_gap, kScreenW, _chartH)];
+    chartView.backgroundColor = UIColor.whiteColor;
+    [view addSubview: chartView];
+    [chartView addSubview:tableView];
     
     MQHandicapView  * handcapView = [[MQHandicapView alloc]initWithFrame:CGRectMake(0, _boardH+_chartH+2*_gap, kScreenW, _capH)];
     [view addSubview: handcapView];

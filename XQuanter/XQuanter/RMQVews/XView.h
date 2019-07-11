@@ -13,6 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 #define kSelfW      self.bounds.size.width
 #define kSelfH      self.bounds.size.height
 
+#define kScreenW    UIScreen.mainScreen.bounds.size.width
+#define kScreenH    UIScreen.mainScreen.bounds.size.height
+
+#define kSViewW         self.view.bounds.size.width
+#define kSViewH         self.view.bounds.size.height
+
 @interface XView : UIView
 
 + (UILabel*)newLabel;

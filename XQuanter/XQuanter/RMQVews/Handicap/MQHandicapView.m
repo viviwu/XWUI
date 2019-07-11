@@ -204,7 +204,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _divisor = 0.5;
-        barH = 30.0;
+        barH = 25.0;
         gap = 2;
         SEC = 5;       //Level 1
         ROW = 2;
